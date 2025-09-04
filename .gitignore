@@ -2,6 +2,9 @@
 *.apk
 *.aab
 
+# But include releases
+!releases/*.apk
+
 # Files for the ART/Dalvik VM
 *.dex
 

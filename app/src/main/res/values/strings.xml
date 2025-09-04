@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Chronoident</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="custom_start_time">Custom Start Time</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="set_custom_time">Set Custom Time</string>
+    <string name="stopwatch_notification">Stopwatch Running</string>
+    <string name="stopwatch_notification_desc">Tap to return to the app</string>
+    <string name="notification_channel_name">Stopwatch</string>
+    <string name="notification_channel_desc">Background stopwatch notifications</string>
+</resources>

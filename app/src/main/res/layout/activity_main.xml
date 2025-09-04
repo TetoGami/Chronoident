@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvStopwatchTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/customTimeGroup" />
+
+    <LinearLayout
+        android:id="@+id/customTimeGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStopwatchTime"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGroup">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_start_time"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hours"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etHours"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    android:maxLength="2" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minutes"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etMinutes"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    android:maxLength="2" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seconds"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etSeconds"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    android:maxLength="2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSetCustomTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_custom_time"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customTimeGroup"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/stop"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/reset"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

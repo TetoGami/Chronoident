@@ -140,7 +140,7 @@ class StopwatchService : Service() {
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(getString(R.string.stopwatch_notification))
             .setContentText(formatTime(elapsedTime))
-            .setSmallIcon(android.R.drawable.ic_device_access_time)
+            .setSmallIcon(android.R.drawable.ic_menu_recent_history)
             .setContentIntent(pendingIntent)
             .setOngoing(true)
             .addAction(android.R.drawable.ic_media_pause, getString(R.string.stop), stopPendingIntent)
